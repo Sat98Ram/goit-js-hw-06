@@ -3,8 +3,12 @@ const input = document.querySelector("#validation-input");
 input.addEventListener("blur", (event) => {
   const text = event.target;
   if (text.value.length === 6) {
-    text.style.outline = "3px solid green";
+    text.classList.add("valid");
+    text.classList.remove("invalid");
   } else {
-    text.style.outline = "3px solid red";
+    text.classList.add("invalid");
+    text.classList.remove("valid");
   }
 });
+
+//  text.style.outline = "3px solid red";

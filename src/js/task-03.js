@@ -16,17 +16,7 @@ const images = [
 const list = document.querySelector(".gallery");
 
 const imageEl = images.map((img) => {
-  const listItem = document.createElement("li");
-  listItem.classList.add("gallery-item");
-
-  const image = document.createElement("img");
-  image.classList.add("image-item");
-  image.src = img.url;
-  image.alt = img.alt;
-
-  listItem.appendChild(image);
-
-  list.appendChild(listItem);
+  return `<li class="gallery-item"><img src="${img.url}" alt="${img.alt}" class="image-item"/></li>`;
 });
 
-// list.insertAdjacentHTML('beforeend', );
+list.insertAdjacentHTML("beforeend", imageEl.join(""));
