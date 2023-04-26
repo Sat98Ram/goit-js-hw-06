@@ -10,5 +10,3 @@ input.addEventListener("blur", (event) => {
     text.classList.remove("valid");
   }
 });
-
-//  text.style.outline = "3px solid red";
