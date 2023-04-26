@@ -12,4 +12,5 @@ loginForm.addEventListener("submit", (event) => {
     };
     console.log(userData);
   }
+  loginForm.reset();
 });
